@@ -1,4 +1,4 @@
-import lesson1 from '../../code/string/lesson1'
+import lesson1 from '../../src/string/lesson1'
 
 test('期望返回结果是调换的字符串', () => {
   const string = "Let's take LeetCode contest"
