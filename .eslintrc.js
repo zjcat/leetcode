@@ -1,3 +1,4 @@
 module.exports = {
-    "extends": ["standard","plugin:jest/recommended"]
+    "extends": ["standard","plugin:jest/recommended"],
+    "parser": "babel-eslint",
 };
