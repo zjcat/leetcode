@@ -27,20 +27,3 @@ export function rotatel2 (arr: number[], k: number): number[] {
   const newPart = part1.concat(part2) // 此方法不会改变现有数组 返回新的数组
   return newPart
 }
-
-// 性能测试
-const arr1 = []
-for (let i = 0; i < 10 * 10000; i++) {
-  arr1.push(i)
-}
-console.time('rotatel')
-rotatel(arr1, 1000 * 10)
-console.timeEnd('rotatel')
-
-const arr2 = []
-for (let i = 0; i < 10 * 10000; i++) {
-  arr2.push(i)
-}
-console.time('rotatel')
-rotatel2(arr2, 1000 * 10)
-console.timeEnd('rotatel')
