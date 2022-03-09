@@ -1,2 +1,2 @@
 // import './array/lesson4'
-import './array/lesson6'
+import './array/lesson7'
