@@ -26,6 +26,7 @@ export function reverseLinkList (link: TlinkListNode, prevNode?: TlinkListNode):
   }
   return sendReverseLink
 }
+
 export function reverseLinkListWhile (link: TlinkListNode): TlinkListNode {
   let reserseLink: TlinkListNode | undefined
   let prevNode: TlinkListNode | undefined

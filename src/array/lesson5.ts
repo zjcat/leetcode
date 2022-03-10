@@ -44,6 +44,7 @@ export class MyQueueLink {
   private head: IListNode | null = null
   private tail: IListNode | null = null
   private len = 0
+  private link : IListNode | null = null
 
   /**
    * 入队，在 tail 位置
@@ -58,6 +59,7 @@ export class MyQueueLink {
         value: n,
         next: null,
     }
+   console.log(JSON.stringify(newNode), JSON.stringify(num),{...newNode})
       // 处理 head
       if (this.head == null) {
           this.head = newNode
@@ -68,7 +70,7 @@ export class MyQueueLink {
           tailNode.next = newNode //{value:1,next:{value:2,next:null}}
       }
       this.tail = newNode //{value:2,next:null}
-      
+      this.link = tailNode;
       // 记录长度
       this.len++
   }
@@ -97,9 +99,15 @@ export class MyQueueLink {
       // length 要单独存储，不能遍历链表来获取（否则时间复杂度太高 O(n)）
       return this.len
   }
+  get linkVal(): IListNode | null{
+    return this.link
+  }
 }
 
 let queue = new MyQueueLink();
 queue.add(1)
 queue.add(2)
+queue.add(3)
+queue.add(4)
 console.log(queue.length)
+console.log(queue.linkVal)
